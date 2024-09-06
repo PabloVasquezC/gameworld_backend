@@ -40,12 +40,11 @@ INSTALLED_APPS = [
     'inventory', 
     'products',
     'users',
-    'rest_framework',
-    'rest_framework_simplejwt',
     'reviews',
     'orders',
     'payments',
     'shipping',
+
     
 ]
 
@@ -56,6 +55,7 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -137,3 +137,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ORIGIN_ALLOW_ALL = True  # Esto permite todas las solicitudes de cualquier dominio. Ajusta según sea necesario.
+

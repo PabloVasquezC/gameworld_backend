@@ -7,7 +7,13 @@ from .serializer import ProductSerializer
 @api_view(['GET'])
 def get_products(request):
     products = Product.objects.all()
-    serializer = ProductSerializer(products, many=True)  # Usamos el serializer
+    serializer = ProductSerializer(products, many=True)  
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
+@api_view(['GET'])
+def get_product(request, pk):
+    product = Product.objects.get(id=pk)
+    serializer = ProductSerializer(product)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 @api_view(['POST'])

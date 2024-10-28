@@ -100,7 +100,7 @@ WSGI_APPLICATION = 'backend_core.wsgi.application'
 
 DATABASES = {
 
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.config(default='postgres://postgres:postgres@localhost:5432/gameworld-db')
 
 }
 

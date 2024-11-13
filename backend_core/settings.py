@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-z$z^emp0$cc*yb^&+ar(1gggch=h#fomn854!#0=ndltu05moe
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
+    'localhost',
     'gameworld-7b4d96ab41b1.herokuapp.com'
 ]
 
@@ -100,9 +100,7 @@ WSGI_APPLICATION = 'backend_core.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-
     'default': dj_database_url.config(default='postgres://postgres:postgres@localhost:5432/gameworld-db')
-
 }
 
 

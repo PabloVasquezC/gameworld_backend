@@ -100,9 +100,10 @@ WSGI_APPLICATION = 'backend_core.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-
-    'default': dj_database_url.config(default='postgres://postgres:postgres@localhost:5432/gameworld-db')
-
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),  # Archivo SQLite por defecto
+    }
 }
 
 

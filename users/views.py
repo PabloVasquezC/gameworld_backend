@@ -9,9 +9,6 @@ def register_user(request):
     data = request.data
     username = data.get('username')
     password = data.get('password')
-    email = data.get('email')
-    phone = data.get('phone')
-    address = data.get('address')
 
     # Validar si el usuario ya existe
     if User.objects.filter(username=username).exists():
@@ -24,9 +21,6 @@ def register_user(request):
     user = User.objects.create(
         username=username,
         password=encrypted_password,  # Guardar la contraseña encriptada
-        email=email,
-        phone=phone,
-        address=address
     )
 
     return Response({'message': 'Usuario creado exitosamente'}, status=status.HTTP_201_CREATED)

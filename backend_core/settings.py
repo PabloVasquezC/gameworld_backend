@@ -97,6 +97,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend_core.wsgi.application'
 
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://gameworld-eacnhzaphthmg0g5.canadacentral-01.azurewebsites.net'
+]
+
+
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 

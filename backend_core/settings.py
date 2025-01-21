@@ -35,7 +35,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'gameworld-7b4d96ab41b1.herokuapp.com'
+    'gameworld-7b4d96ab41b1.herokuapp.com',
+    'gameworld-eacnhzaphthmg0g5.canadacentral-01.azurewebsites.net'
 ]
 
 
